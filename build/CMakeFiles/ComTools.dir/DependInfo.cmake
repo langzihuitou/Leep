@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/mnt/d/git/Leep/Serialize/DataStream.cpp" "CMakeFiles/ComTools.dir/Serialize/DataStream.cpp.o" "gcc" "CMakeFiles/ComTools.dir/Serialize/DataStream.cpp.o.d"
   "/mnt/d/git/Leep/main.cpp" "CMakeFiles/ComTools.dir/main.cpp.o" "gcc" "CMakeFiles/ComTools.dir/main.cpp.o.d"
   )
 

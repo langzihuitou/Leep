@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ComTools.dir/Serialize/DataStream.cpp.o"
+  "CMakeFiles/ComTools.dir/Serialize/DataStream.cpp.o.d"
   "CMakeFiles/ComTools.dir/main.cpp.o"
   "CMakeFiles/ComTools.dir/main.cpp.o.d"
   "ComTools"

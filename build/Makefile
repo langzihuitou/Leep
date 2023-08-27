@@ -129,6 +129,30 @@ ComTools/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ComTools.dir/build.make CMakeFiles/ComTools.dir/build
 .PHONY : ComTools/fast
 
+Serialize/DataStream.o: Serialize/DataStream.cpp.o
+.PHONY : Serialize/DataStream.o
+
+# target to build an object file
+Serialize/DataStream.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ComTools.dir/build.make CMakeFiles/ComTools.dir/Serialize/DataStream.cpp.o
+.PHONY : Serialize/DataStream.cpp.o
+
+Serialize/DataStream.i: Serialize/DataStream.cpp.i
+.PHONY : Serialize/DataStream.i
+
+# target to preprocess a source file
+Serialize/DataStream.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ComTools.dir/build.make CMakeFiles/ComTools.dir/Serialize/DataStream.cpp.i
+.PHONY : Serialize/DataStream.cpp.i
+
+Serialize/DataStream.s: Serialize/DataStream.cpp.s
+.PHONY : Serialize/DataStream.s
+
+# target to generate assembly for a file
+Serialize/DataStream.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ComTools.dir/build.make CMakeFiles/ComTools.dir/Serialize/DataStream.cpp.s
+.PHONY : Serialize/DataStream.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ComTools"
+	@echo "... Serialize/DataStream.o"
+	@echo "... Serialize/DataStream.i"
+	@echo "... Serialize/DataStream.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

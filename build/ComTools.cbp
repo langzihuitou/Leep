@@ -82,6 +82,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/d/git/Leep/Serialize/DataStream.cpp">
+			<Option target="ComTools"/>
+		</Unit>
+		<Unit filename="/mnt/d/git/Leep/Serialize/DataStream.h">
+			<Option target="ComTools"/>
+		</Unit>
+		<Unit filename="/mnt/d/git/Leep/Serialize/Serializable.h">
+			<Option target="ComTools"/>
+		</Unit>
 		<Unit filename="/mnt/d/git/Leep/Thread/ThreadPool.h">
 			<Option target="ComTools"/>
 		</Unit>

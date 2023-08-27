@@ -1,4 +1,16 @@
 C:\WINDOWS\system32\wsl.exe --distribution Ubuntu-22.04 --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/d/git/Leep/build && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /mnt/d/git/Leep -B /mnt/d/git/Leep/build"
 -- Configuring done
--- Generating done
--- Build files have been written to: /mnt/d/git/Leep/build
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    Serialize/Serializable.h
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: ComTools
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
