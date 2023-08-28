@@ -1,6 +1,0 @@
-/mnt/d/git/Leep/build/CMakeFiles/ComTools.dir
-/mnt/d/git/Leep/build/CMakeFiles/edit_cache.dir
-/mnt/d/git/Leep/build/CMakeFiles/rebuild_cache.dir
-/mnt/d/git/Leep/build/serialize/CMakeFiles/serialize.dir
-/mnt/d/git/Leep/build/serialize/CMakeFiles/edit_cache.dir
-/mnt/d/git/Leep/build/serialize/CMakeFiles/rebuild_cache.dir
