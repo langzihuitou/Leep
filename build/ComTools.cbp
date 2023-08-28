@@ -97,6 +97,9 @@
 		<Unit filename="/mnt/d/git/Leep/main.cpp">
 			<Option target="ComTools"/>
 		</Unit>
+		<Unit filename="/mnt/d/git/Leep/utility/Singleton.h">
+			<Option target="ComTools"/>
+		</Unit>
 		<Unit filename="/mnt/d/git/Leep/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

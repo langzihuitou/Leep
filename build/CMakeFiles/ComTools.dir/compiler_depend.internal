@@ -439,6 +439,7 @@ CMakeFiles/ComTools.dir/main.cpp.o
  /usr/include/c++/11/bits/allocated_ptr.h
  /usr/include/c++/11/ext/aligned_buffer.h
  /usr/include/c++/11/ext/concurrence.h
+ /mnt/d/git/Leep/utility/Singleton.h
  /mnt/d/git/Leep/Serialize/DataStream.h
  /usr/include/c++/11/cstring
  /usr/include/string.h

@@ -437,6 +437,7 @@ CMakeFiles/ComTools.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/ext/concurrence.h \
+  ../utility/Singleton.h \
   ../Serialize/DataStream.h \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
@@ -466,6 +467,8 @@ CMakeFiles/ComTools.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/uniform_int_dist.h \
   ../Serialize/serializable.h
 
+
+../utility/Singleton.h:
 
 /usr/include/c++/11/bits/unique_lock.h:
 

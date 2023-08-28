@@ -26,4 +26,7 @@ private:
 private:
     static T *m_instance;  // 静态指针成员变量，用于存储实例的指针
 };
+
+template <typename T>
+T * Singleton<T>::m_instance = NULL;
 #endif //COMTOOLS_SINGLETON_H
