@@ -14,9 +14,11 @@
 #include <mutex>
 #include <condition_variable>
 
+#include "../utility/Singleton.h"
 class ThreadPool {
+    friend class Singleton<ThreadPool>;
 public:
-    ThreadPool(size_t numThreads) : stop(false) {
+    ThreadPool(size_t numThreads = 4) : stop(false) {
         for (size_t i = 0; i < numThreads; ++i) {
             workers.emplace_back(
                     [this] {

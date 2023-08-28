@@ -8,6 +8,7 @@ int main() {
     // 提交任务到线程池
     for (int i = 0; i < 10; ++i) {
         threadPool.enqueue(printNumber, i);
+       // Singleton<ThreadPool>::instance()->enqueue(printNumber, i);
     }
 
     // 等待所有任务完成
