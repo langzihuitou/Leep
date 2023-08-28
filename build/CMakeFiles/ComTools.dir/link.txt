@@ -1,1 +1,1 @@
-/usr/bin/c++ -g -rdynamic CMakeFiles/ComTools.dir/main.cpp.o CMakeFiles/ComTools.dir/Serialize/DataStream.cpp.o -o ComTools 
+/usr/bin/c++ -g -rdynamic CMakeFiles/ComTools.dir/main.cpp.o -o ComTools  ../lib/libserialize.a 

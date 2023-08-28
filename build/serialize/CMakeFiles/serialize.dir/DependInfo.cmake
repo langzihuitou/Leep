@@ -8,12 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/d/git/Leep/main.cpp" "CMakeFiles/ComTools.dir/main.cpp.o" "gcc" "CMakeFiles/ComTools.dir/main.cpp.o.d"
+  "/mnt/d/git/Leep/serialize/DataStream.cpp" "serialize/CMakeFiles/serialize.dir/DataStream.cpp.o" "gcc" "serialize/CMakeFiles/serialize.dir/DataStream.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/d/git/Leep/build/serialize/CMakeFiles/serialize.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

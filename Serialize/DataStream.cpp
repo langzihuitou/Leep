@@ -1,4 +1,4 @@
-#include "DataStream.h"
+#include "../include/DataStream.h"
 
 
 DataStream::DataStream() : m_pos(0)
@@ -529,5 +529,11 @@ DataStream & DataStream::operator >> (string & value)
 DataStream & DataStream::operator >> (Serializable & value)
 {
     read(value);
+    return *this;
+}
+
+template<typename T>
+DataStream &DataStream::operator<<(const list<T> &value) {
+    write(value);
     return *this;
 }

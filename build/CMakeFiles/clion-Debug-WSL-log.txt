@@ -1,4 +1,5 @@
 C:\WINDOWS\system32\wsl.exe --distribution Ubuntu-22.04 --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export WSL_INTEROP=/run/WSL/1513_interop && export JETBRAINS_IDE=TRUE && cd /mnt/d/git/Leep/build && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /mnt/d/git/Leep -B /mnt/d/git/Leep/build"
+-- source path: /mnt/d/git/Leep
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /mnt/d/git/Leep/build

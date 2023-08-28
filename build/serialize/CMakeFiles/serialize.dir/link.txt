@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libserialize.a CMakeFiles/serialize.dir/DataStream.cpp.o
+/usr/bin/ranlib ../../lib/libserialize.a

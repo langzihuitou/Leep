@@ -14,7 +14,7 @@
 #include <mutex>
 #include <condition_variable>
 
-#include "../utility/Singleton.h"
+#include "Singleton.h"
 class ThreadPool {
     friend class Singleton<ThreadPool>;
 public:

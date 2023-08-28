@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/git/Leep/build/CMakeFiles /mnt/d/git/Leep/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /mnt/d/git/Leep/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/git/Leep/build/CMakeFiles /mnt/d/git/Leep/build/serialize//CMakeFiles/progress.marks
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serialize/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/git/Leep/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serialize/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serialize/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serialize/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/d/git/Leep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named ComTools
+# Convenience name for target.
+serialize/CMakeFiles/serialize.dir/rule:
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serialize/CMakeFiles/serialize.dir/rule
+.PHONY : serialize/CMakeFiles/serialize.dir/rule
 
-# Build rule for target.
-ComTools: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ComTools
-.PHONY : ComTools
-
-# fast build rule for target.
-ComTools/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ComTools.dir/build.make CMakeFiles/ComTools.dir/build
-.PHONY : ComTools/fast
-
-#=============================================================================
-# Target rules for targets named serialize
-
-# Build rule for target.
-serialize: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 serialize
+# Convenience name for target.
+serialize: serialize/CMakeFiles/serialize.dir/rule
 .PHONY : serialize
 
 # fast build rule for target.
 serialize/fast:
-	$(MAKE) $(MAKESILENT) -f serialize/CMakeFiles/serialize.dir/build.make serialize/CMakeFiles/serialize.dir/build
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f serialize/CMakeFiles/serialize.dir/build.make serialize/CMakeFiles/serialize.dir/build
 .PHONY : serialize/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+DataStream.o: DataStream.cpp.o
+.PHONY : DataStream.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ComTools.dir/build.make CMakeFiles/ComTools.dir/main.cpp.o
-.PHONY : main.cpp.o
+DataStream.cpp.o:
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f serialize/CMakeFiles/serialize.dir/build.make serialize/CMakeFiles/serialize.dir/DataStream.cpp.o
+.PHONY : DataStream.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+DataStream.i: DataStream.cpp.i
+.PHONY : DataStream.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ComTools.dir/build.make CMakeFiles/ComTools.dir/main.cpp.i
-.PHONY : main.cpp.i
+DataStream.cpp.i:
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f serialize/CMakeFiles/serialize.dir/build.make serialize/CMakeFiles/serialize.dir/DataStream.cpp.i
+.PHONY : DataStream.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+DataStream.s: DataStream.cpp.s
+.PHONY : DataStream.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ComTools.dir/build.make CMakeFiles/ComTools.dir/main.cpp.s
-.PHONY : main.cpp.s
+DataStream.cpp.s:
+	cd /mnt/d/git/Leep/build && $(MAKE) $(MAKESILENT) -f serialize/CMakeFiles/serialize.dir/build.make serialize/CMakeFiles/serialize.dir/DataStream.cpp.s
+.PHONY : DataStream.cpp.s
 
 # Help Target
 help:
@@ -174,11 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ComTools"
 	@echo "... serialize"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... DataStream.o"
+	@echo "... DataStream.i"
+	@echo "... DataStream.s"
 .PHONY : help
 
 
@@ -190,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/d/git/Leep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
