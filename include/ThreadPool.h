@@ -71,9 +71,6 @@ private:
 };
 
 
-// 示例任务函数
-void printNumber(int num) {
-    std::cout << "Number: " << num << std::endl;
-}
+
 
 #endif //COMTOOLS_THREADPOOL_H
