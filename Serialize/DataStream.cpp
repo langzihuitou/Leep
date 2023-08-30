@@ -111,7 +111,7 @@ void DataStream::show() const
             if ((DataType)m_buf[++i] == DataType::INT32)
             {
                 int len = *((int *)(&m_buf[++i]));
-                i += 4;
+                i += len;
             }
             else
             {
@@ -133,7 +133,7 @@ void DataStream::show() const
             if ((DataType)m_buf[++i] == DataType::INT32)
             {
                 int len = *((int *)(&m_buf[++i]));
-                i += 4;
+                i += len;
             }
             else
             {

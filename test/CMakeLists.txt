@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
 project(test)
 aux_source_directory(./ SRC)
-include_directories(${HEAD_PATH})
+include_directories(${HEAD_PATH} ${HEAD_PATH}/spdlog)
+
 set(LIBRARY_OUTPUT_PATH ${LIB_PATH})
 add_library(${TEST_LIB} STATIC ${SRC})
 # 链接操作

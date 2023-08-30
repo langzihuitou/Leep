@@ -8,6 +8,7 @@ set(LIB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 # 头文件目录
 set(HEAD_PATH ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(HEAD_PATH_TEST ${CMAKE_CURRENT_SOURCE_DIR}/test)
+
 # 静态库的名字
 set(SERIALIZE_LIB serialize)
 set(REFLECT_LIB reflect)
