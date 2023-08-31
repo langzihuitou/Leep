@@ -3,7 +3,7 @@
 //
 
 #include "../include/socket/EventPoller.h"
-std::unique_ptr<std::vector<epoll_event> > m_events;
+
 EventPoller::EventPoller(bool et) : m_epfd(0), m_max_connections(0), m_events(new std::vector<epoll_event>()), m_et(et)
 {
 }
