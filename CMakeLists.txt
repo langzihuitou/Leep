@@ -19,6 +19,7 @@ include_directories(${HEAD_PATH} ${HEAD_PATH_TEST} )
 add_subdirectory(serialize)
 add_subdirectory(reflect)
 add_subdirectory(test)
+add_subdirectory(socket)
 aux_source_directory( ${PROJECT_SOURCE_DIR} SRC)
 # 输出一般日志信息
 message(STATUS "source path: ${PROJECT_SOURCE_DIR}")
@@ -30,4 +31,5 @@ target_link_libraries(${PROJECT_NAME}
         serialize
         test
         reflect
+        socket
         )

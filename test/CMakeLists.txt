@@ -9,4 +9,5 @@ add_library(${TEST_LIB} STATIC ${SRC})
 target_link_libraries(${PROJECT_NAME}
         reflect
         serialize
+        socket
         )

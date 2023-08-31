@@ -5,6 +5,7 @@
 #include "testDataStream.h"
 #include "testReflect.h"
 #include "testSpdlog.h"
+#include "testSocket.h"
 void testDataStream_01()
 {
     DataStream ds;
@@ -62,4 +63,36 @@ void testSpdlog_01()
     spdlog::info("Support for floats {:03.2f}", 1.23456);
     spdlog::info("Positional args are {1} {0}..", "too", "supported");
     spdlog::info("{:<30}", "left aligned");
+}
+
+void handleEvent(int fd, void* ptr, __uint32_t events) {
+    std::cout << "Event occurred on file descriptor: " << fd << std::endl;
+    // 实际的事件处理逻辑在这里进行
+    // ...
+}
+
+void testEpoll_01()
+{
+    EventPoller eventPoller(true);
+    int max_connections = 10;
+    eventPoller.create(max_connections);
+
+    // 添加事件处理回调函数
+    for (int i = 0; i < max_connections; ++i) {
+        eventPoller.add(i, nullptr, EPOLLIN, handleEvent);
+    }
+
+    // 模拟事件触发
+    for (int i = 0; i < max_connections; ++i) {
+        std::cout << "Triggering event on file descriptor: " << i << std::endl;
+        // 模拟事件发生后的处理延迟
+        sleep(1);
+        // 假设事件发生后会将事件的相关信息传递给 eventPoller，比如文件描述符和事件类型
+        eventPoller.wait(0);
+    }
+
+    // 删除事件处理回调函数
+    for (int i = 0; i < max_connections; ++i) {
+        eventPoller.del(i);
+    }
 }
