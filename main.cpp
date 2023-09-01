@@ -6,10 +6,11 @@
 #include "./test/testSocket.h"
 int main() {
     try{
-//        testDataStream_01();
-//        testThreaPool_01();
-//        testReflect_01();
-//        testSpdlog_01();
+        testDataStream_01();
+        testThreaPool_01();
+        testReflect_01();
+        testSpdlog_01();
+        testSpdlog_02();
         testEpoll_01();
     }
     catch (...)

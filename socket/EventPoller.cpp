@@ -20,7 +20,7 @@ EventPoller::~EventPoller()
 
 void EventPoller::ctrl(int fd, void * ptr, __uint32_t events, int op)
 {
-    struct epoll_event ev;
+    struct epoll_event ev { };
     ev.data.ptr = ptr;
     if (m_et)
     {
@@ -40,9 +40,14 @@ void EventPoller::create(int max_connections)
     int epoll_create(int size);
     该函数接受一个整数参数 size，用于指定 epoll 实例能够为监视的文件描述符维护的最大数目。这个参数在大多数情况下可以被忽略，因为内核会根据需要自动调整大小。
     调用 epoll_create() 函数将会返回一个非负整数的文件描述符，用于表示创建的 epoll 实例。如果调用失败，返回值将为 -1，并且错误号 errno 会被设置以指示具体的错误类型。
-    */
+    epoll_create1(0) 是一个创建 epoll 实例的系统调用函数。它是通过 epoll_create 函数实现的，通过传递参数 0 等效于传递 EPOLL_CLOEXEC。
+    以下是对参数的解释：
+    flags：标志参数，用于指定一些选项。其中常用的选项如下：
+    0：无特殊选项。
+    EPOLL_CLOEXEC：将创建的 epoll 实例设置为 close-on-exec，表示在执行 exec 系列函数时自动关闭。
+    epoll_create1 函数返回的是一个整型的 epoll 文件描述符（epoll fd），用于后续的 epoll 操作。如果创建失败，将返回 -1，并设置相应的错误码。*/
     m_max_connections = max_connections;
-    m_epfd = epoll_create(max_connections + 1);
+    m_epfd = epoll_create1(0);
     if (m_epfd < 0)
     {
         return;
@@ -64,7 +69,6 @@ void EventPoller::mod(int fd, void * ptr, __uint32_t events)
 
 void EventPoller::del(int fd)
 {
-    m_eventCallbacks.erase(fd);
     ctrl(fd, nullptr, 0, EPOLL_CTL_DEL);
     m_eventCallbacks.erase(fd);
 }

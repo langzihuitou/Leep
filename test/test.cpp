@@ -65,6 +65,14 @@ void testSpdlog_01()
     spdlog::info("{:<30}", "left aligned");
 }
 
+
+void testSpdlog_02()
+{
+    auto my_logger = spdlog::basic_logger_mt("file_logger", "logs/basic-log.txt", true);
+    my_logger->info("Welcome to spdlog!");
+    my_logger->error("Some error message with arg: {}", 1);
+}
+
 void handleEvent(int fd, void* ptr, __uint32_t events) {
     std::cout << "Event occurred on file descriptor: " << fd << std::endl;
     // 实际的事件处理逻辑在这里进行
